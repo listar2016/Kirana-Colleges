@@ -91,6 +91,7 @@
 <script>
 import { required, email } from 'vuelidate/lib/validators'
 import RadialProgressBar from 'vue-radial-progress'
+import jQuery from 'jquery'
 export default {
   name: 'home',
   components: {
@@ -405,6 +406,7 @@ export default {
         this.$v.$touch()
         if (!this.$v.email.$error) {
           this.currentStatus = 3
+          this.saveEmail()
         }
       } else if (this.currentStatus == 3 ) {
         this.currentIndex++
@@ -415,6 +417,16 @@ export default {
     },
     prevItem() {
       this.currentIndex--;
+    },
+    saveEmail() {
+      let script_url = "https://script.google.com/macros/s/AKfycbwsfF5P5vvicBhh_NpWGISVHVDCDgeUcBPS9JCyfM0jRiPRngiD/exec";
+      let url = script_url+"?email="+this.email+"&action=insert";
+      var request = jQuery.ajax({
+          crossDomain: true,
+          url: url ,
+          method: "GET",
+          dataType: "jsonp"
+      });
     }
   },
 }
