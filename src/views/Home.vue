@@ -66,9 +66,9 @@
         <h1>Thank you!</h1>
       </b-alert>
       <b-form-group>
-        <button class="btn btn-primary mr-2"> Enrol </button>
-        <button class="btn btn-success mr-2"> More Info </button>
-        <button class="btn btn-secondary mr-2"> Not For Me </button>
+        <a class="btn btn-primary mr-2" href="https://eduforms.formstack.com/forms/student_online_form"> Enrol </a>
+        <a class="btn btn-success mr-2" href="https://kiranacolleges.edu.au/courses/"> More Info </a>
+        <a class="btn btn-secondary mr-2" href="https://kiranacolleges.edu.au/"> Not For Me </a>
       </b-form-group>
     </div>
     <div v-if="currentStatus == 0 || currentStatus == 3">
