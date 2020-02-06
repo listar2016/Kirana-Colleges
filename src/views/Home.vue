@@ -1,7 +1,7 @@
 <template>
   <div class="container text-center p-3">
     <h3>Answering Your Key Question About Online Learning</h3>
-    <h6>In this mini learnig series you will discover just how simple and easy it is to complete your chosen course.<br>Simply click on the below to get started.</h6>
+    <h6>In this mini learning series you will discover just how simple and easy it is to complete your chosen course.<br>Simply click on the below to get started.</h6>
     <b-progress :max="videoData.length" animated class="mx-1">
       <b-progress-bar :value="currentIndex">
         {{ currentIndex }} / {{ videoData.length }}
